@@ -21,7 +21,7 @@ npm run start
 </template>
 ```
 ```js
-  import FlVueWrapper from 'vue-flatpickr-component-wapper'
+  import FlVueWrapper from 'fl-vue-wrapper'
   exports default {
     data(){
       return {
