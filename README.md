@@ -41,7 +41,7 @@ include script then global variable `FlVueWrapper` is set
   <script src="dist/fl-vue-wapper.js"></script>
   <!-- omit -->
   <div id="app">
-    <fl-vue-wapper v-model="date"</fl-vue-wapper>
+    <fl-vue-wapper v-model="date"></fl-vue-wapper>
   </div>
 ```
 ```js

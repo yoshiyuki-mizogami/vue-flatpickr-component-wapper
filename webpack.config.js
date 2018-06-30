@@ -35,7 +35,7 @@ module.exports = [{
 },
 {
   target:'web',
-    mode:'development',
+    mode:'production',
     entry:{
       main:join(__dirname, 'fl-wrapper.vue')
     },
@@ -46,12 +46,6 @@ module.exports = [{
       libraryTarget:'var',
       libraryExport:'default'
     },
-    // externals:{
-    //   vue:{
-    //     root:'Vue',
-
-    //   }
-    // },
     resolve:{
       extensions:['.js', '.json', '.vue']
     },
