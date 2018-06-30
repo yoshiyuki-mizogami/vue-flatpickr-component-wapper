@@ -6,7 +6,7 @@
 <style>
 </style>
 <script>
-import fl from '../../fl-wrapper.vue'
+import fl from '../../fl-vue-wrapper.vue'
 export default {
   data(){
     return {

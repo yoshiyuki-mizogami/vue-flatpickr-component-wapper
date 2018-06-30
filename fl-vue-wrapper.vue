@@ -30,7 +30,6 @@ export default {
       if(isNaN(md)){ 
         result = null
       }else{
-        console.log(md)
         md.setTime(md.getTime() + (day * n))
         result = md
       }

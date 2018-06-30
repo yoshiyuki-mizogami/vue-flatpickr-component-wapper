@@ -1,4 +1,4 @@
 node_modules
-/app/bundle
+/demo/bundle
 package-lock.json
 /dist

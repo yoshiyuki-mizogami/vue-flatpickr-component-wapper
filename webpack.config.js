@@ -37,7 +37,7 @@ module.exports = [{
   target:'web',
     mode:'production',
     entry:{
-      main:join(__dirname, 'fl-wrapper.vue')
+      main:join(__dirname, 'fl-vue-wrapper.vue')
     },
     output:{
       path:join(__dirname, 'dist'),
