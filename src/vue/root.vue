@@ -6,8 +6,7 @@
 <style>
 </style>
 <script>
-import moment from 'moment'
-import fl from './fl-wrapper.vue'
+import fl from '../../fl-wrapper.vue'
 export default {
   data(){
     return {

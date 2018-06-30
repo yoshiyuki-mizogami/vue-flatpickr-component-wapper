@@ -1,13 +1,13 @@
 const {join} = require('path')
 const VueLoader = require('vue-loader/lib/plugin')
-module.exports = {
+module.exports = [{
   target:'web',
   mode:'development',
   entry:{
     main:join(__dirname, 'src', 'main.js')
   },
   output:{
-    path:join(__dirname, 'app', 'bundle'),
+    path:join(__dirname, 'demo', 'bundle'),
     filename:'bundle.js'
   },
   resolve:{
@@ -32,4 +32,47 @@ module.exports = {
     new VueLoader()
   ],
   devtool:'cheap-eval-sourcemap'
-}
+},
+{
+  target:'web',
+    mode:'development',
+    entry:{
+      main:join(__dirname, 'fl-wrapper.vue')
+    },
+    output:{
+      path:join(__dirname, 'dist'),
+      filename:'fl-vue-wrapper.js',
+      library:'FlVueWrapper',
+      libraryTarget:'var',
+      libraryExport:'default'
+    },
+    // externals:{
+    //   vue:{
+    //     root:'Vue',
+
+    //   }
+    // },
+    resolve:{
+      extensions:['.js', '.json', '.vue']
+    },
+    module:{
+      rules:[
+        {
+          test:/\.vue$/,
+          loader:'vue-loader'
+        },
+        {
+          test:/\.css/,
+          use:[
+            'vue-style-loader',
+            'css-loader'
+          ]
+        }
+      ]
+    },
+    plugins:[
+      new VueLoader()
+    ],
+    devtool:false
+},
+]
