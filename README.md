@@ -55,3 +55,30 @@ include script then global variable `FlVueWrapper` is set
     }
   }
 ```
+
+# Config object through to original component
+See also [Flatpickr options](https://flatpickr.js.org/options/)
+```vue
+<template>
+  <div>
+    <fl-vue-wrapper v-model="date"/>
+  </div
+</template>
+<script>
+  import FlVueWrapper from 'fl-vue-wrapper'
+  import lang from 'flatpickr/dist/l10n/ja'
+  exports default {
+    data(){
+      return {
+        date:new Date(),
+        config:{
+          locale:lang.ja
+        }
+      }
+    },
+    components:{
+      FlVueWrapper
+    }
+  }
+</script>
+```

@@ -1,5 +1,5 @@
 <template>
-  <fl :value="value" @input="update" @wheel.native="wheel" @click.native="init"/>
+  <fl :value="value" @input="update" @wheel.native="wheel" :config="config" @click.native="init"/>
 </template>
 <script>
 import fl from 'vue-flatpickr-component'
@@ -7,7 +7,11 @@ import 'flatpickr/dist/flatpickr.css'
 const day = 1000 * 60 * 60 * 24
 export default {
   props:{
-    value:[Date, String]
+    value:[Date, String],
+    config:{
+      type:Object,
+      default:{}
+    }
   },
   components:{
     fl
