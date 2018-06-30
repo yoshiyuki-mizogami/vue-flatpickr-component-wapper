@@ -8,8 +8,9 @@ npm i git+https://github.com/yoshiyuki-mizogami/vue-flatpickr-component-wapper
 
 # Demo build
 ```sh
+cd node_modules/fl-vue-wrapper
 npm i
-npm run start
+npm start
 ```
 
 # How to use on component system (.e.g webpack)
