@@ -13,14 +13,13 @@ npm run start
 ```
 
 # How to use on component system (.e.g webpack)
-```html
+```vue
 <template>
   <div>
     <fl-vue-wrapper v-model="date"/>
   </div
 </template>
-```
-```js
+<script>
   import FlVueWrapper from 'fl-vue-wrapper'
   exports default {
     data(){
@@ -32,6 +31,7 @@ npm run start
       FlVueWrapper
     }
   }
+</script>
 ```
 
 # How to use as standalone
