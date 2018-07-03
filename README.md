@@ -62,7 +62,7 @@ See also [Flatpickr options](https://flatpickr.js.org/options/)
 ```vue
 <template>
   <div>
-    <fl-vue-wrapper v-model="date"/>
+    <fl-vue-wrapper v-model="date" :config="config"/>
   </div
 </template>
 <script>
