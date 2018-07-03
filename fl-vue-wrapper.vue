@@ -1,5 +1,5 @@
 <template>
-  <fl :value="value" @input="update" @wheel.native="wheel" :config="config" @click.native="init"/>
+  <fl :value="value" @input="update" @wheel.native.prevent="wheel" :config="config" @click.native="init"/>
 </template>
 <script>
 import fl from 'vue-flatpickr-component'
