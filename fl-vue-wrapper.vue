@@ -10,7 +10,9 @@ export default {
     value:[Date, String],
     config:{
       type:Object,
-      default:{}
+      default(){
+        return {}
+      }
     }
   },
   components:{
