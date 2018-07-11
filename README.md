@@ -83,3 +83,30 @@ See also [Flatpickr options](https://flatpickr.js.org/options/)
   }
 </script>
 ```
+
+## on change hook
+```vue
+<template>
+  <div>
+    <fl-vue-wrapper v-model="date" @change="hook"/>
+  </div
+</template>
+<script>
+  import FlVueWrapper from 'fl-vue-wrapper'
+  exports default {
+    data(){
+      return {
+        date:new Date()
+      }
+    },
+    components:{
+      FlVueWrapper
+    },
+    methods:{
+      hook(newValue){
+        console.log(newValue)
+      }
+    }
+  }
+</script>
+```

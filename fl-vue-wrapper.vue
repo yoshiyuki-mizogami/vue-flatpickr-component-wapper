@@ -20,24 +20,27 @@ export default {
   },
   methods:{
     update(v){
+     if(!v && !this.value){
+       return
+     }
      const updateDate = new Date(v)
      if(isNaN(updateDate)){
-       return this.$emit('input', null)
+       return this.inputAndChange(null)
      }
       if(!this.value){
-        return this.$emit('input', updateDate)
+        return this.inputAndChange(updateDate)
       }
       const valueTime = this.value.getTime()
       const updateTime = updateDate.getTime()
       if(valueTime !== updateTime){
-        this.$emit('input', updateDate) 
+        this.inputAndChange(updateDate) 
       }
     },
     init(){
       if(this.value){
         return
       }
-      this.$emit('input', new Date(new Date().toDateString()))
+      this.inputAndChange(new Date(new Date().toDateString()))
     },
     wheel(ev){
       const n = (0 < ev.deltaY)?1:-1
@@ -50,7 +53,11 @@ export default {
         md.setTime(md.getTime() + (day * n))
         result = md
       }
-      this.$emit('input', result)
+      this.inputAndChange( result )
+    },
+    inputAndChange(v){
+      this.$emit('input', v)
+      this.$emit('change', v)
     }
   }
 }

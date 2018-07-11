@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <fl v-model="date" :config="config"></fl>
+    <fl v-model="date" @change="changeHook" :config="config"></fl>
   </div>
 </template>
 <style>
@@ -19,6 +19,11 @@ export default {
   },
   components:{
     fl
+  },
+  methods:{
+    changeHook(newValue){
+      console.log(newValue)
+    }
   }
 }
 </script>
