@@ -7,7 +7,7 @@ import 'flatpickr/dist/flatpickr.css'
 const day = 1000 * 60 * 60 * 24
 export default {
   props:{
-    value:Date,
+    value:[Date, String],
     config:{
       type:Object,
       default(){
@@ -17,6 +17,18 @@ export default {
   },
   components:{
     fl
+  },
+  watch:{
+    value(v){
+      if(v === null){
+        return
+      }
+      if(v.constructor === String){
+        const d = new Date(v)
+        this.$emit('input', d)
+        return
+      }
+    }
   },
   methods:{
     update(v){
@@ -43,7 +55,7 @@ export default {
       this.inputAndChange(new Date(new Date().toDateString()))
     },
     wheel(ev){
-      const n = (0 < ev.deltaY)?1:-1
+      const n = (0 < ev.deltaY) ? 1 : -1
       let result
       let d = this.value
       const md = new Date(d)
