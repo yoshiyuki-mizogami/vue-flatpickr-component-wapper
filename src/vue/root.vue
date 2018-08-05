@@ -1,6 +1,7 @@
 <template>
   <div class="main">
-    <fl v-model="date" @change="changeHook" :config="config"></fl>
+    <fl v-model="date" @change="changeHook" :config="config"/>
+    <fl v-model="date2" @change="changeHook"/>
   </div>
 </template>
 <style>
@@ -12,18 +13,26 @@ export default {
   data(){
     return {
       date:null,
+      date2:null,
       config:{
-        locale:ja.ja
+        locale:ja.ja,
+        allowInput:true
       }
     }
+  },
+  created(){
+    setTimeout(()=>{
+      this.date = new Date()
+    }, 3000)
   },
   components:{
     fl
   },
   methods:{
     changeHook(newValue){
-      console.log(newValue)
+      console.log('fire change hoook', newValue)
     }
   }
 }
+
 </script>
