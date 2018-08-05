@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <fl v-model="date" @change="changeHook" :config="config"/>
+    <fl v-model="date" @change="changeHook" :config="{allowInput:true}"/>
     <fl v-model="date2" @change="changeHook"/>
   </div>
 </template>
@@ -13,11 +13,7 @@ export default {
   data(){
     return {
       date:null,
-      date2:null,
-      config:{
-        locale:ja.ja,
-        allowInput:true
-      }
+      date2:null
     }
   },
   created(){

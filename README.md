@@ -110,6 +110,7 @@ See also [Flatpickr options](https://flatpickr.js.org/options/)
     }
   }
 </script>
+```
 ## Config allowInput
 ```vue
 <template>
