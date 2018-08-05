@@ -1,6 +1,7 @@
 # fl-vue-component-wapper
 added events  to vue-flatpikr-component  
-move date when mouse wheel  and set today when clicked the form
+move date when mouse wheel  and set today when clicked the form  
+only support date input (The function will be broken if time is enabled)
 # install
 ```sh
 npm i git+https://github.com/yoshiyuki-mizogami/vue-flatpickr-component-wapper
@@ -106,6 +107,26 @@ See also [Flatpickr options](https://flatpickr.js.org/options/)
       hook(newValue){
         console.log(newValue)
       }
+    }
+  }
+</script>
+## Config allowInput
+```vue
+<template>
+  <div>
+    <fl-vue-wrapper v-model="date" :config="{allowInput:true}"/>
+  </div
+</template>
+<script>
+  import FlVueWrapper from 'fl-vue-wrapper'
+  exports default {
+    data(){
+      return {
+        date:new Date()
+      }
+    },
+    components:{
+      FlVueWrapper
     }
   }
 </script>
