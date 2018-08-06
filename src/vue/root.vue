@@ -9,7 +9,6 @@
 <script>
 import fl from '../../fl-vue-wrapper.vue'
 import lang from 'flatpickr/dist/l10n'
-console.log(lang.ja)
 export default {
   data(){
     return {

@@ -7,6 +7,9 @@ only support date input (The function will be broken if time is enabled)
 npm i git+https://github.com/yoshiyuki-mizogami/vue-flatpickr-component-wapper
 ```
 
+# Demo page
+[https://yoshiyuki-mizogami.github.io/vue-flatpickr-component-wapper/demo/](https://yoshiyuki-mizogami.github.io/vue-flatpickr-component-wapper/demo/)
+
 # Demo build
 ```sh
 cd node_modules/fl-vue-wrapper
