@@ -8,13 +8,14 @@
 </style>
 <script>
 import fl from '../../fl-vue-wrapper.vue'
-import {ja} from 'flatpickr/dist/l10n/ja'
+import lang from 'flatpickr/dist/l10n'
+console.log(lang.ja)
 export default {
   data(){
     return {
       date:null,
       date2:null,
-      ja
+      ja:lang.ja
     }
   },
   created(){
